@@ -1,0 +1,18 @@
+workspace ‘HappyVoice.xcworkspace'
+use_frameworks!
+platform :ios, ‘9.0’
+def shared_pods
+    pod 'SnapKit'#, '~> 5.0.1' #swift版本的约束,相当于OC的masonry
+    pod 'Moya' #高级的网络请求三方库
+    pod 'SwiftyJSON'#, '~> 5.0.0' #swift网络请求json解析,数据model解析
+    pod 'IBAnimatable'#, '~> 6.0.0' #高级动画
+    pod 'NVActivityIndicatorView'#, '~> 4.8.0' #loading框
+    pod 'Kingfisher'#, '~> 5.8.3' #图片下载、缓存的框架,灵感取自于SDWebImage
+    pod 'MJRefresh'#, '~> 3.2.0' #下拉刷新
+    pod 'LeanCloud'#, '~> 17.0.0' #云引擎
+end
+
+target 'HappyVoice’ do
+    project 'HappyVoice.xcodeproj'
+    shared_pods
+end
