@@ -12,8 +12,8 @@ class BaseUITabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.addChildViewController(orginVC: HVHomeMainVC(), imageName: "tabBar_loan_normal", selectImage: "", title: "贷款", tag: 1)
-        self.addChildViewController(orginVC: HVMyCenterVC(), imageName: "tabBar_quota_normal", selectImage: "", title: "提额", tag: 2)
+        self.addChildViewController(orginVC: HVHomeMainVC(), imageName: "tabBar_loan_normal", selectImage: "tabBar_loan_normal", title: "首页", tag: 1)
+        self.addChildViewController(orginVC: HVMyCenterVC(), imageName: "tabBar_quota_normal", selectImage: "tabBar_quota_normal", title: "我的", tag: 2)
     }
     
     private func addChildViewController(orginVC:UIViewController?, imageName: String?, selectImage: String?, title: String?, tag:NSInteger) {
