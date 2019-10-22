@@ -3,18 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04578962235D52A500831B57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04578961235D52A500831B57 /* AppDelegate.swift */; };
 		04578964235D52A500831B57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04578963235D52A500831B57 /* SceneDelegate.swift */; };
 		04578966235D52A500831B57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04578965235D52A500831B57 /* ViewController.swift */; };
-		04578969235D52A500831B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04578967235D52A500831B57 /* Main.storyboard */; };
 		0457896B235D52A500831B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0457896A235D52A500831B57 /* Assets.xcassets */; };
 		0457896E235D52A500831B57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0457896C235D52A500831B57 /* LaunchScreen.storyboard */; };
 		04578979235D52A600831B57 /* HappyVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04578978235D52A600831B57 /* HappyVoiceTests.swift */; };
 		04578984235D52A600831B57 /* HappyVoiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04578983235D52A600831B57 /* HappyVoiceUITests.swift */; };
+		0457899D235D811600831B57 /* HVLoginMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457899C235D811600831B57 /* HVLoginMainVC.swift */; };
+		0457899F235EB51E00831B57 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457899E235EB51E00831B57 /* BaseUIViewController.swift */; };
+		045789A1235ECED300831B57 /* BaseUITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789A0235ECED300831B57 /* BaseUITabBarController.swift */; };
+		045789A3235ECF0C00831B57 /* BaseUINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789A2235ECF0C00831B57 /* BaseUINavigationController.swift */; };
+		045789A5235ED67000831B57 /* HVHomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789A4235ED67000831B57 /* HVHomeMainVC.swift */; };
+		045789A7235ED68E00831B57 /* HVMyCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789A6235ED68E00831B57 /* HVMyCenterVC.swift */; };
+		045789AA235EE80000831B57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045789A8235EE80000831B57 /* Main.storyboard */; };
 		3B4DD0AB00CA565EF6583F1E /* Pods_HappyVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A066DD7BA7F1DFBA233DA2 /* Pods_HappyVoice.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +46,6 @@
 		04578961235D52A500831B57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04578963235D52A500831B57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04578965235D52A500831B57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04578968235D52A500831B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0457896A235D52A500831B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0457896D235D52A500831B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0457896F235D52A500831B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +55,13 @@
 		0457897F235D52A600831B57 /* HappyVoiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyVoiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04578983235D52A600831B57 /* HappyVoiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyVoiceUITests.swift; sourceTree = "<group>"; };
 		04578985235D52A600831B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0457899C235D811600831B57 /* HVLoginMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVLoginMainVC.swift; sourceTree = "<group>"; };
+		0457899E235EB51E00831B57 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		045789A0235ECED300831B57 /* BaseUITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUITabBarController.swift; sourceTree = "<group>"; };
+		045789A2235ECF0C00831B57 /* BaseUINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUINavigationController.swift; sourceTree = "<group>"; };
+		045789A4235ED67000831B57 /* HVHomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVHomeMainVC.swift; sourceTree = "<group>"; };
+		045789A6235ED68E00831B57 /* HVMyCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVMyCenterVC.swift; sourceTree = "<group>"; };
+		045789A9235EE80000831B57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BC756BA438BB5DDD76732C2 /* Pods-HappyVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyVoice.release.xcconfig"; path = "Target Support Files/Pods-HappyVoice/Pods-HappyVoice.release.xcconfig"; sourceTree = "<group>"; };
 		90A066DD7BA7F1DFBA233DA2 /* Pods_HappyVoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyVoice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6676CA2A0AC8D745DB69317 /* Pods-HappyVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyVoice.debug.xcconfig"; path = "Target Support Files/Pods-HappyVoice/Pods-HappyVoice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +148,9 @@
 		04578991235D53F700831B57 /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				04578999235D7DB900831B57 /* LoginCenter */,
+				04578998235D7D0D00831B57 /* HomeCenter */,
+				04578997235D7D0D00831B57 /* MyCenter */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -154,6 +169,9 @@
 		04578993235D53F700831B57 /* BaseClass */ = {
 			isa = PBXGroup;
 			children = (
+				0457899E235EB51E00831B57 /* BaseUIViewController.swift */,
+				045789A0235ECED300831B57 /* BaseUITabBarController.swift */,
+				045789A2235ECF0C00831B57 /* BaseUINavigationController.swift */,
 			);
 			path = BaseClass;
 			sourceTree = "<group>";
@@ -178,9 +196,33 @@
 				0457896F235D52A500831B57 /* Info.plist */,
 				0457896A235D52A500831B57 /* Assets.xcassets */,
 				0457896C235D52A500831B57 /* LaunchScreen.storyboard */,
-				04578967235D52A500831B57 /* Main.storyboard */,
+				045789A8235EE80000831B57 /* Main.storyboard */,
 			);
 			name = "Support File";
+			sourceTree = "<group>";
+		};
+		04578997235D7D0D00831B57 /* MyCenter */ = {
+			isa = PBXGroup;
+			children = (
+				045789A6235ED68E00831B57 /* HVMyCenterVC.swift */,
+			);
+			path = MyCenter;
+			sourceTree = "<group>";
+		};
+		04578998235D7D0D00831B57 /* HomeCenter */ = {
+			isa = PBXGroup;
+			children = (
+				045789A4235ED67000831B57 /* HVHomeMainVC.swift */,
+			);
+			path = HomeCenter;
+			sourceTree = "<group>";
+		};
+		04578999235D7DB900831B57 /* LoginCenter */ = {
+			isa = PBXGroup;
+			children = (
+				0457899C235D811600831B57 /* HVLoginMainVC.swift */,
+			);
+			path = LoginCenter;
 			sourceTree = "<group>";
 		};
 		9EE2AA6A2ADCA53D17801202 /* Frameworks */ = {
@@ -197,7 +239,6 @@
 				B6676CA2A0AC8D745DB69317 /* Pods-HappyVoice.debug.xcconfig */,
 				5BC756BA438BB5DDD76732C2 /* Pods-HappyVoice.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -307,9 +348,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045789AA235EE80000831B57 /* Main.storyboard in Resources */,
 				0457896E235D52A500831B57 /* LaunchScreen.storyboard in Resources */,
 				0457896B235D52A500831B57 /* Assets.xcassets in Resources */,
-				04578969235D52A500831B57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,9 +417,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0457899F235EB51E00831B57 /* BaseUIViewController.swift in Sources */,
 				04578966235D52A500831B57 /* ViewController.swift in Sources */,
+				045789A5235ED67000831B57 /* HVHomeMainVC.swift in Sources */,
 				04578962235D52A500831B57 /* AppDelegate.swift in Sources */,
 				04578964235D52A500831B57 /* SceneDelegate.swift in Sources */,
+				045789A7235ED68E00831B57 /* HVMyCenterVC.swift in Sources */,
+				045789A1235ECED300831B57 /* BaseUITabBarController.swift in Sources */,
+				045789A3235ECF0C00831B57 /* BaseUINavigationController.swift in Sources */,
+				0457899D235D811600831B57 /* HVLoginMainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,20 +461,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04578967235D52A500831B57 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04578968235D52A500831B57 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0457896C235D52A500831B57 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0457896D235D52A500831B57 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		045789A8235EE80000831B57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				045789A9235EE80000831B57 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
