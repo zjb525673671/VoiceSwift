@@ -28,6 +28,13 @@ class HVHomeMainVC: BaseUIViewController {
     }
     
     //MARK: 🔒private
+    func xn_initData() -> Void {
+        
+    }
+    
+    func xn_initSubViews() -> Void {
+        
+    }
     //MARK: 🚪public
     //MARK: 🍐delegate
     //MARK: ☎️notification
