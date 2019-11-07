@@ -27,6 +27,71 @@ class XNNetWorkManager {
 
 extension XNNetWorkManager {
     
+    public func requestTotalMethod(baseUrl:String, method:HTTPMethod = .get, parameters:[String:Any], successBack:@escaping(_ response:JSON)->(),failBack:@escaping(_ error:String)->()) {
+        let jsonStr = XNHelper.dictionaryToJSONString(dict: parameters)
+        let manager = Alamofire.SessionManager.default
+        let headers: HTTPHeaders = [
+            "Content-Type" : "application/json",
+            "UserAgent" : XNHelper.help_dic(sign:jsonStr, url:Environment_BaseURL+baseUrl)
+        ]
+        manager.request(Environment_BaseURL+baseUrl, method: method, parameters: parameters, encoding: URLEncoding.httpBody, headers: headers)
+            .responseJSON { (response) in
+                //当请求后response是我们自定义的，这个变量用于接受服务器响应的信息
+                //使用switch判断请求是否成功，也就是response的result
+                switch response.result {
+                case .success(let value):
+                    //当响应成功是，使用临时变量value接受服务器返回的信息并判断是否为[String: AnyObject]类型 如果是那么将其传给其定义方法中的success
+                    print("入参:\(parameters)")
+                    let json = JSON(value)
+                    let status = json["status"].intValue
+                    if status == 404 {
+                        failBack(json["error"].stringValue)
+                        print("接口异常的URL:\(Environment_BaseURL+baseUrl)")
+                        print("接口异常的数据:")
+                        print(json)
+                    } else {
+                        let code = json["code"].intValue
+                        let message = json["message"].stringValue
+                        
+                        if code == 401 {
+                            XNUserInfo.removeAllKey()
+                            //通知重新登录
+                            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "LoginRegisterShowNotifacation"), object: nil)
+                            print("token失效的URL:\(Environment_BaseURL+baseUrl)")
+                            print("token失效的数据:")
+                            print(json)
+                        } else if (code == 200 || code == 0) {
+                            print("请求成功的URL:\(Environment_BaseURL+baseUrl)")
+                            print("请求成功的数据:")
+                            print(json)
+                            successBack(json)
+                        } else {
+                            print("请求接口报错的URL:\(Environment_BaseURL+baseUrl)")
+                            print("请求接口报错的数据:")
+                            print(json)
+                            failBack(message)
+                        }
+                    }
+                    
+                case .failure(let error):
+                    var errorMessage = ""
+                    if error._code == -1009 {
+                        errorMessage = "没有网络"
+                    } else if error._code == -1001 {
+                        errorMessage = "连接超时"
+                    } else {
+                        errorMessage = "网络异常"
+                    }
+                    failBack(errorMessage)
+                    print("入参:\(parameters)")
+                    print("请求失败的URL:\(Environment_BaseURL+baseUrl)")
+                    print("error:\(error)错误原因:\(errorMessage)")
+                }
+        }
+    }
+    
+    
+    
     public func POSTRequest(urlString: String, params : [String : Any], success : @escaping (_ response : JSON)->(), failture : @escaping (_ error : String)->()) {
         var newDict: [String: Any] = params
         var baseDic : [String : String] = [String : String]()
@@ -125,7 +190,7 @@ extension XNNetWorkManager {
     public func setEnvironment() -> String {
         if EnvironmentIndex == 1 {
             //测试环境
-            return "http://pre.xnshandai.net/"
+            return "http://test02qygateway.qingyinlive.com/"
         } else if EnvironmentIndex == 2  {
             //开发环境
             return "http://test.xnsudai5.com/"

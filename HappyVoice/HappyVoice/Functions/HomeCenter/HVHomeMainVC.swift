@@ -16,6 +16,7 @@ class HVHomeMainVC: BaseUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        self.xn_initData()
         // Do any additional setup after loading the view.
     }
     
@@ -29,7 +30,19 @@ class HVHomeMainVC: BaseUIViewController {
     
     //MARK: 🔒private
     func xn_initData() -> Void {
-        
+        /**{
+            bizType = 2;
+            deviceNo = 82BD48569A6E4B6CA3271B8B3714622C;
+            loginCustomerId = 0;
+            pageSize = 10;
+         ["roomId":"1073","typeId":"1","liveType":"1009"]
+         http://test02qygateway.qingyinlive.com/gateway/commt/cmtArticle/dynamicsHomePage
+        }**/
+        XNNetWorkManager.sharedInstance.requestTotalMethod(baseUrl: "gateway/commt/cmtArticle/dynamicsHomePage", method: .post, parameters: ["bizType":"2","deviceNo":"82BD48569A6E4B6CA3271B8B3714622C","loginCustomerId":"0","pageSize":"10"], successBack: { (json) in
+            print("成功!")
+        }) { (error) in
+            print("失败了!")
+        }
     }
     
     func xn_initSubViews() -> Void {

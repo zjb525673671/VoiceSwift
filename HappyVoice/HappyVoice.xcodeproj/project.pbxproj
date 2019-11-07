@@ -22,6 +22,7 @@
 		045789A7235ED68E00831B57 /* HVMyCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789A6235ED68E00831B57 /* HVMyCenterVC.swift */; };
 		045789AD235EFB6B00831B57 /* XNNetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789AC235EFB6B00831B57 /* XNNetWorkManager.swift */; };
 		045789AF235EFC3D00831B57 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045789AE235EFC3D00831B57 /* UserInfoModel.swift */; };
+		04B672AB2369814200FF7292 /* XNHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B672AA2369814200FF7292 /* XNHelper.swift */; };
 		3B4DD0AB00CA565EF6583F1E /* Pods_HappyVoice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90A066DD7BA7F1DFBA233DA2 /* Pods_HappyVoice.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		045789A6235ED68E00831B57 /* HVMyCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HVMyCenterVC.swift; sourceTree = "<group>"; };
 		045789AC235EFB6B00831B57 /* XNNetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNNetWorkManager.swift; sourceTree = "<group>"; };
 		045789AE235EFC3D00831B57 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		04B672AA2369814200FF7292 /* XNHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XNHelper.swift; sourceTree = "<group>"; };
 		5BC756BA438BB5DDD76732C2 /* Pods-HappyVoice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyVoice.release.xcconfig"; path = "Target Support Files/Pods-HappyVoice/Pods-HappyVoice.release.xcconfig"; sourceTree = "<group>"; };
 		90A066DD7BA7F1DFBA233DA2 /* Pods_HappyVoice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HappyVoice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6676CA2A0AC8D745DB69317 /* Pods-HappyVoice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyVoice.debug.xcconfig"; path = "Target Support Files/Pods-HappyVoice/Pods-HappyVoice.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				045789AC235EFB6B00831B57 /* XNNetWorkManager.swift */,
+				04B672AA2369814200FF7292 /* XNHelper.swift */,
 				045789AE235EFC3D00831B57 /* UserInfoModel.swift */,
 			);
 			path = Tools;
@@ -426,6 +429,7 @@
 				04578962235D52A500831B57 /* AppDelegate.swift in Sources */,
 				04578964235D52A500831B57 /* SceneDelegate.swift in Sources */,
 				045789AD235EFB6B00831B57 /* XNNetWorkManager.swift in Sources */,
+				04B672AB2369814200FF7292 /* XNHelper.swift in Sources */,
 				045789A7235ED68E00831B57 /* HVMyCenterVC.swift in Sources */,
 				045789A1235ECED300831B57 /* BaseUITabBarController.swift in Sources */,
 				045789A3235ECF0C00831B57 /* BaseUINavigationController.swift in Sources */,

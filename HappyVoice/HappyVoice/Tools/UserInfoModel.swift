@@ -18,6 +18,18 @@ class LoginUserModel: NSObject {
     
     var isLogin:Bool = false
     var isLoginPageShow : Bool = false
+    //客户的唯一uid
+    var uid:String? {
+        get{
+            return UserDefaults.standard.object(forKey: "user_key_uid") as? String
+        }
+        set{
+            if newValue != nil {
+                UserDefaults.standard.set(newValue, forKey: "user_key_uid")
+            }
+        }
+    }
+    
     //客户的唯一id
     var customId:String? {
         get{
@@ -114,6 +126,7 @@ class LoginUserModel: NSObject {
     }
     
     func removeAllKey() {
+        UserDefaults.standard.removeObject(forKey: "user_key_uid")
         UserDefaults.standard.removeObject(forKey: "user_key_customId")
         UserDefaults.standard.removeObject(forKey: "user_key_phoneNum")
         UserDefaults.standard.removeObject(forKey: "user_key_tokenCode")
