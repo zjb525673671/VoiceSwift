@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HVHomeMainVC: BaseUIViewController {
 
@@ -43,10 +44,32 @@ class HVHomeMainVC: BaseUIViewController {
         }) { (error) in
             print("失败了!")
         }
+        
+        let mdstr = XNHelper.md5(strs: "1")?.lowercased()
+        print("加密结果:"+mdstr!);
     }
     
+    
     func xn_initSubViews() -> Void {
-        
+        let parameters:Dictionary = ["key":"93c921ea8b0348af8e8e7a6a273c41bd"]
+        let manager = Alamofire.SessionManager.default
+        manager.request("http://apis.haoservice.com/weather/city", method: .get, parameters: parameters, encoding: URLEncoding.httpBody, headers: nil).response { (result) in
+            
+        }
+//        let parameters:Dictionary = ["key":"93c921ea8b0348af8e8e7a6a273c41bd"]
+//        Alamofire.SessionManager.default.request(.GET, method: "http://apis.haoservice.com/weather/city", parameters: parameters)
+//            .responseJSON { response in
+//
+//                print("result==\(response.result)")   // 返回结果，是否成功
+//                if let jsonValue = response.result.value {
+//                    /*
+//                    error_code = 0
+//                    reason = ""
+//                    result = 数组套字典的城市列表
+//                    */
+//                    print("code: \(jsonValue["error_code"])")
+//                }
+//        }
     }
     //MARK: 🚪public
     //MARK: 🍐delegate
